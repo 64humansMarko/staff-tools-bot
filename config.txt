@@ -1,0 +1,2 @@
+bot-token: NTAxMTA1NDkwNjA5MDQ1NTA4.DqUinw.LjU806iJK-0woWU87Efrpv5fWIM
+bot-command-prefix: !
