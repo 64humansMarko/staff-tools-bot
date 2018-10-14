@@ -13,6 +13,10 @@ client = commands.Bot(command_prefix="!")
 """Default settings"""
 bot_command_prefix = "!" #change this prefix to you liking
 
+
+"""Command permissions"""
+give_role_permission = [] #will be used in "giverole" command
+
 """Events"""
 @client.event
 async def on_ready(): #executes when the bot is ready to process messages
@@ -23,7 +27,6 @@ async def on_message(msg):
     if msg.content.upper().startswith(bot_command_prefix+"ping".upper()):
         await client.send_message(msg.channel, "{0.author.mention} Pong!".format(msg))
 
-
 """Setup"""
 print("Setup...")
 config_file = open("../config/config.txt", "r")
@@ -32,6 +35,7 @@ config_file.close()
 bot_cmd_prefix_defined = False #is the bot command defined in the config file
 bot_token_defined = False #is the bot token defined in the config file
 token = ""
+
 for i in config_file_content:
     if i.startswith("bot-token:") and not bot_token_defined:
         token = "".join(i[10:].split(" "))
@@ -40,6 +44,11 @@ for i in config_file_content:
         bot_command_prefix = "".join(i[19:].split(" "))
         print("Using '"+bot_command_prefix+"' as bot command prefix")
         bot_cmd_prefix_defined = True
+    if i.startswith("give-role-cmd-permission:"):
+        for j in i[26:].split(" "):
+            give_role_permission.append(j)
+
+
 
 if not bot_token_defined:
     print("Error: Unspecified bot token! Please add it in config.txt")

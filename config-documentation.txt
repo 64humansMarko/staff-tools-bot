@@ -1,8 +1,11 @@
+NOTE: there must always be a space between the field and the value
+
 In the config.txt you will see this:
 
 "
 bot-token: Your bot token goes here
 bot-command-prefix: Your command prefix goes here
+give-role-cmd-permission: List of all roles that can use this command goes here
 "
 
 Lets skip the token part for now.
@@ -13,3 +16,4 @@ So for example when our command prefix is '!' we have to type in '!command' and 
 we would have to type "?command". So as the 'bot-command-prefix' field set it what do you want to type before the command.
 
 #TODO explain the bot token part
+#TODO explain the give role cmd permission part
