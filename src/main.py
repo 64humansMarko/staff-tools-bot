@@ -18,6 +18,11 @@ bot_command_prefix = "!" #change this prefix to you liking
 async def on_ready(): #executes when the bot is ready to process messages
     print("Bot is ready!")
 
+@client.event
+async def on_message(msg):
+    if msg.content.upper().startswith(bot_command_prefix+"ping".upper()):
+        await client.send_message(msg.channel, "{0.author.mention} Pong!".format(msg))
+
 
 """Setup"""
 print("Setup...")
