@@ -21,7 +21,7 @@ async def on_ready(): #executes when the bot is ready to process messages
 
 """Setup"""
 print("Setup...")
-config_file = open("../config.txt", "r")
+config_file = open("../config/config.txt", "r")
 config_file_content = config_file.read().split("\n")
 config_file.close()
 bot_cmd_prefix_defined = False #is the bot command defined in the config file
