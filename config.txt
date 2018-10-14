@@ -1,2 +1,2 @@
-bot-token: NTAxMTA1NDkwNjA5MDQ1NTA4.DqUinw.LjU806iJK-0woWU87Efrpv5fWIM
-bot-command-prefix: !
+bot-token: Your bot token goes here
+bot-command-prefix: Your command prefix goes here
