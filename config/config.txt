@@ -1,0 +1,3 @@
+bot-token: Your bot token goes here
+bot-command-prefix: Your command prefix goes here
+give-role-cmd-permission: List of all roles that can use this command goes here
